@@ -11,6 +11,7 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
+        console.log(this.state.projects)
         this.props.loadProjects();
     }
 

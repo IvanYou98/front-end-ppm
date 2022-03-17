@@ -27,7 +27,7 @@ const slice = createSlice({
 export const {projectsLoaded, projectFound, projectDeleted} = slice.actions;
 export default slice.reducer;
 
-const baseURL = "/api/project"
+const baseURL = "https://project-manager-ivanyou.herokuapp.com" + "/api/project"
 
 export const saveProject = (project, history) => async dispatch => {
     try {

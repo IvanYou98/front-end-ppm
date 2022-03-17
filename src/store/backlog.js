@@ -30,7 +30,7 @@ export const {tasksLoaded, taskFound, taskDeleted} = slice.actions;
 export default slice.reducer;
 
 
-const baseURL = "/api/backlog"
+const baseURL = "https://project-manager-ivanyou.herokuapp.com" + "/api/backlog"
 
 export const saveTask = (projectId, task, history) => async dispatch => {
     try {
