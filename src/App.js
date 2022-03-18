@@ -19,6 +19,7 @@ function App() {
             <BrowserRouter>
                 <div>
                     <NavBar/>
+                    <Route path="/" exact component={props => <Dashboard {...props} />}/>
                     <Route path="/dashBoard" exact component={props => <Dashboard {...props} />}/>
                     <Route path="/addProject" exact component={props => <AddProject {...props} />}/>
                     <Route path="/updateProject/:id" exact component={props => <UpdateProject {...props} />}/>
