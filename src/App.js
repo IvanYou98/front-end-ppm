@@ -1,6 +1,6 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Redirect, Route} from "react-router-dom";
 import NavBar from "./components/NavBar";
 import AddProject from "./components/project/AddProject";
 import Dashboard from "./components/Dashboard";
@@ -19,7 +19,10 @@ function App() {
             <BrowserRouter>
                 <div>
                     <NavBar/>
-                    <Route path="/" exact component={props => <Dashboard {...props} />}/>
+                    <Route exact path="/">
+                        <Redirect to="/dashboard" />
+                    </Route>
+                    {/*<Route path="/" exact component={props => <Dashboard {...props} />}/>*/}
                     <Route path="/dashBoard" exact component={props => <Dashboard {...props} />}/>
                     <Route path="/addProject" exact component={props => <AddProject {...props} />}/>
                     <Route path="/updateProject/:id" exact component={props => <UpdateProject {...props} />}/>
